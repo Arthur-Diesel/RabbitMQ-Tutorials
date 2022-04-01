@@ -1,6 +1,6 @@
 # RabbitMQ - Tutorials
 ## These tutorials cover the basics of creating messaging applications using RabbitMQ.
-### https://www.rabbitmq.com/getstarted
+### https://www.rabbitmq.com/getstarted.html
 - [ ] 01 ~ Hello World
 - [ ] 02 ~ Work queues
 - [ ] 03 ~ Publish/Subscribe
