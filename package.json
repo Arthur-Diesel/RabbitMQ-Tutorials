@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Arthur-Diesel/RabbitMQ-Tutorials/issues"
   },
-  "homepage": "https://github.com/Arthur-Diesel/RabbitMQ-Tutorials#readme"
+  "homepage": "https://github.com/Arthur-Diesel/RabbitMQ-Tutorials#readme",
+  "dependencies": {
+    "amqplib": "^0.8.0"
+  }
 }
