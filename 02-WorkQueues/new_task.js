@@ -9,19 +9,23 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             throw error1;
           }
 
-        const queue = 'queue';
-        var msg = 'Test!';
-
+        const queue = 'task_queue'
+        const msg = process.argv.slice(2).join(' ') || "Hello World!";          
+        
         channel.assertQueue(queue, {
-            durable: false
-        })
+            durable: true
+        });
+        
+        channel.sendToQueue(queue, Buffer.from(msg), {
+            persistent: true
+        });
 
-        channel.sendToQueue(queue, Buffer.from(msg));
-        channel.sendToQueue(queue, Buffer.from('Teste!'));
+        console.log(" [x] Sent '%s'", msg);
 
         setTimeout(function() {
             connection.close();
             process.exit(0)
         }, 500);
+
     });
 });
